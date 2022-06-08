@@ -34,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     background: var(--mainColor);
     color: var(--textColor);
-    font-size: 62%;
+    font-size: 60%;
 
     @media (max-width: 968px){
       font-size: 55%;
@@ -61,6 +61,16 @@ export const GlobalStyles = createGlobalStyle`
       text-decoration: none;
       color: var(--text-2-color);
     }
+
+    ::selection {
+    background: var(--accent-color-2);
+    color: white;
+
+    ::-moz-selection {
+      background: var(--accent-color-2);
+    color: white;
+  }
+}
 `
 
 export const mobile = (props) => {
@@ -87,14 +97,24 @@ export const laptop = (props) => {
   `
 }
 
-export const Container = styled.div`
+export const desktop = (props) => {
+  return css`
+    @media only screen and (max-width: 1024px){
+      ${props} 
+    }
+  `
+}
+
+export const ContainerGlobal = styled.div`
     width: 100%;
     max-width: 1300px;
-    margin-right: auto;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
     margin-left: auto;
-    padding: 0 50px;
+    margin-right: auto;
+    padding: 0 100px;
 
-    ${tablet({ padding: '0 30px' })}
+    ${tablet({ padding: '0 50px' })}
 `
 
 export const MainHeading = styled.h1`
@@ -107,7 +127,7 @@ export const MainHeading = styled.h1`
 `
 
 export const Heading = styled.h2`
-    font-size: clamp(1.3rem, 13vw, 3.1rem);
+    font-size: clamp(1rem, 12vw, 3.3rem);
     margin: ${({ margin }) => (margin || '')};
     margin-bottom: ${({ mb }) => (mb || '')};
     margin-top: ${({ mt }) => (mt || '')};
@@ -119,7 +139,7 @@ export const Heading = styled.h2`
 `
 
 export const Subtitle = styled.p`
-    font-size: clamp(.8rem, 4vw, 2rem);
+    font-size: clamp(1rem, 4vw, 2.2rem);
     margin: ${({ margin }) => (margin || '')};
     margin-bottom: ${({ mb }) => (mb || '')};
     margin-top: ${({ mt }) => (mt || '')};
@@ -127,7 +147,6 @@ export const Subtitle = styled.p`
     line-height: 1.06;
     text-align: center;
     width: ${({ width }) => (width || '100%')};
-    font-weight: 500;
     font-weight: 400;
 `
 

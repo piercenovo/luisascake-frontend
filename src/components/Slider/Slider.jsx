@@ -19,12 +19,12 @@ const Slider = ({ sliders }) => {
         <KeyboardArrowLeftOutlined style={iconStyles} />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-          {sliders.map((slider, index) => {
+          {sliders.map((slider) => {
             return (
-            <Slide bg={slider.bg} key={index}>
+            <Slide bg={slider.bg} key={slider.id}>
               <ImgContainer>
                   <Image src={slider.image} alt={slider.title} />
-                </ImgContainer>
+              </ImgContainer>
               <InfoContainer>
                 <Title>{slider.title}</Title>
                 <Desc>{slider.desc}</Desc>

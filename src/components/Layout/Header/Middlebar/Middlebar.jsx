@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { DrawerButton } from '../Navbar/NavbarStyles'
 
 const Middlebar = ({ toggleDrawer }) => {
-  const iconStyles = { color: 'var(--text-2-color)', fontSize: '22px' }
+  const iconStyles = { color: 'var(--text-2-color)', fontSize: '26px' }
   return (
     <Container>
       <Wrapper>

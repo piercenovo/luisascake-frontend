@@ -18,7 +18,7 @@ export const sliders = [
   {
     id: 3,
     title: 'No dejes para mañana',
-    desc: 'El chocolate que puedes comper hoy',
+    desc: 'El chocolate que puedes comper hoy.',
     image: 'https://res.cloudinary.com/cloud-digital-asset/image/upload/v1654664896/slider-1_arueln.png',
     button: 'Ver más',
     bg: 'f5fafd'

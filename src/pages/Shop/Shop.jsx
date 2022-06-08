@@ -1,5 +1,5 @@
 import Helmet from 'react-helmet'
-import { BigText, CenterText } from '../../styles/globalStyles'
+import Products from '../../components/Products/Products'
 
 const Shop = () => {
   return (
@@ -7,9 +7,7 @@ const Shop = () => {
       <Helmet>
         <title>Tienda</title>
       </Helmet>
-      <CenterText>
-      <BigText>Tienda</BigText>
-    </CenterText>
+      <Products />
     </>
 
   )
