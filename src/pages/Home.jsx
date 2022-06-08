@@ -1,13 +1,10 @@
-import { BigText, CenterText } from '../styles/globalStyles'
-// import Carousel from '../components/Carousel/Carousel'
+import Slider from '../components/Slider/Slider'
+import { sliders } from '../data/SlidersData'
 
 const Home = () => {
   return (
     <>
-      <CenterText>
-      <BigText>Home</BigText>
-      </CenterText>
-      {/* <Carousel /> */}
+      <Slider sliders={sliders} />
     </>
 
   )

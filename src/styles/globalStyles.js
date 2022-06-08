@@ -25,6 +25,11 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
     }
 
+    html {
+      scrollbar-width: normal;
+      scrollbar-color: var(--accent-color-3) var(--light-color);
+    }
+
     html, body{
     font-family: 'Montserrat', sans-serif;
     background: var(--mainColor);
@@ -206,7 +211,7 @@ export const Button = styled.button`
   &:hover {
     color: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
     background: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
   }
 `
 
