@@ -1,5 +1,5 @@
 import { products } from '../../../data/ProductsData'
-import Product from '../../Product/Product'
+import CardProduct from '../../CardProduct/CardProduct'
 import { Container, Main, FilterContainer, Filter, FilterText, Select, Option } from './MainProductStyles'
 
 const MainProduct = () => {
@@ -11,7 +11,7 @@ const MainProduct = () => {
         </Filter>
         <Filter>
           <Select>
-            <Option selected>Orden predeterminado</Option>
+            <Option>Orden predeterminado</Option>
             <Option>Orden por popularidad</Option>
             <Option>Orden por los últimos</Option>
             <Option>Orden por precio: Bajo a Alto</Option>
@@ -21,7 +21,7 @@ const MainProduct = () => {
       </FilterContainer>
       <Container>
         {products.map((product) => (
-          <Product item={product} key={product.id} />
+          <CardProduct item={product} key={product.id} />
         ))}
       </Container>
     </Main>

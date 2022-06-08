@@ -22,7 +22,6 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Montserrat', sans-serif;
     }
 
     html {
@@ -112,9 +111,7 @@ export const ContainerGlobal = styled.div`
     margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 100px;
-
-    ${tablet({ padding: '0 50px' })}
+    padding: 0rem 5rem;
 `
 
 export const MainHeading = styled.h1`
@@ -213,26 +210,26 @@ export const Column = styled.div`
 `
 
 export const Button = styled.button`
-  align-self: flex-start;
-  padding: .6rem 1.2rem;
-  font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 18px;
-  letter-spacing: 1.54px;
-  cursor: pointer;
-  background: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
-  color: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
-  border-radius: 4px;
-  white-space: nowrap;
-  outline: none;
-  border: 2px solid var(--primary-color);
+align-self: flex-start;
+padding: 1rem 1.5rem;
+font-weight: 500;
+font-size: 1.8rem;
+line-height: 18px;
+letter-spacing: 1px;
+cursor: pointer;
+background: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
+color: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
+border-radius: 4px;
+white-space: nowrap;
+outline: none;
+border: 2px solid var(--primary-color);
+transition: all 0.3s ease-in-out;
+text-transform: uppercase;
 
-  &:hover {
-    color: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
-    background: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
-    transition: all 0.3s ease;
-  }
-`
+&:hover {
+  color: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
+  background: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
+}`
 
 export const BigText = styled.h1`
   text-align: center;

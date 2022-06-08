@@ -1,6 +1,7 @@
 import { KeyboardArrowLeftOutlined, KeyboardArrowRightOutlined } from '@material-ui/icons'
 import { useState } from 'react'
-import { Arrow, Button, Container, Desc, Image, ImgContainer, InfoContainer, Slide, Title, Wrapper } from './SliderStyles'
+import { Button } from '../../styles/globalStyles'
+import { Arrow, Container, Desc, Image, ImgContainer, InfoContainer, Slide, Title, Wrapper } from './SliderStyles'
 
 const Slider = ({ sliders }) => {
   const iconStyles = { color: 'var(--text-2-color)', fontSize: '30px' }

@@ -1,6 +1,6 @@
 import { Container } from './PopularProductsStyles'
 import { popularProducts } from '../../data/ProductsData'
-import Product from '../Product/Product'
+import CardProduct from '../CardProduct/CardProduct'
 import { ContainerGlobal, Heading, Subtitle } from '../../styles/globalStyles'
 const PopularProducts = () => {
   return (
@@ -9,7 +9,7 @@ const PopularProducts = () => {
       <Subtitle mb='.8rem'>Lo preferido por nuestros clientes</Subtitle>
       <Container>
       {popularProducts.map((product) => (
-        <Product item={product} key={product.id} />
+        <CardProduct item={product} key={product.id} />
       ))}
       </Container>
     </ContainerGlobal>

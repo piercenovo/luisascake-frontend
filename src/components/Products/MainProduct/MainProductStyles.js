@@ -51,9 +51,10 @@ export const Select = styled.select`
   outline: none;
   cursor: pointer;
   border: 2px solid var(--primary-color);
-  border-radius: 10px;
+  border-radius: 5px;
   color: var(--text-color);
   font-weight: 500;
+  font-size: 1.6rem;
 `
 export const Option = styled.option`
   cursor: pointer;

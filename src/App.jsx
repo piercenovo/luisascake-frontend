@@ -25,6 +25,7 @@ import Desserts from './pages/Shop/Desserts'
 import Cheesecakes from './pages/Shop/Cheesecakes'
 import Snacks from './pages/Shop/Snacks'
 import Packs from './pages/Shop/Packs'
+import DetailsProduct from './pages/DetailsProduct'
 
 const App = () => {
   return (
@@ -60,6 +61,9 @@ const App = () => {
         <Route path="favoritos" element={<Favorites />} />
         <Route path="carrito-de-compras" element={<ShoppingCart />} />
         <Route path="busqueda" element={<Search />} />
+
+        <Route path="productos/:category" element={<Shop />} />
+        <Route path="producto/:id" element={<DetailsProduct />} />
       </Routes>
       <Footer />
     </Router>

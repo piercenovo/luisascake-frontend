@@ -78,3 +78,9 @@ export const LoginButton = styled.button`
     cursor: pointer;
   }
 `
+
+export const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+  height: 30px;
+`

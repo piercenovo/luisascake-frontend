@@ -1,9 +1,10 @@
 import Menu from '../Menu/Menu'
-import { Nav, NavbarContainer, NavRoute, CenterNav, NavRoutes } from './NavbarStyles'
+import { Nav, NavbarContainer, NavRoute, CenterNav, NavRoutes, Image } from './NavbarStyles'
 
 const Navbar = ({ routes }) => {
   return (
       <Nav>
+        <Image src='https://res.cloudinary.com/cloud-digital-asset/image/upload/v1654726775/decoration_wehrzf.png' />
         <NavbarContainer>
           <CenterNav>
             <NavRoutes>

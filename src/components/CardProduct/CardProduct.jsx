@@ -1,7 +1,7 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons'
-import { Container, Hover, Icon, Image, ImgContainer, InfoContainer, Price, PriceContainer, Span, Title } from './ProductStyles'
+import { Container, Hover, Icon, Image, ImgContainer, InfoContainer, Price, PriceContainer, Span, Title } from './CardProductStyles'
 
-const Product = ({ item }) => {
+const CardProduct = ({ item }) => {
   const iconStyles = { color: 'var(--text-2-color)', fontSize: '22px' }
   return (
     <Container>
@@ -12,7 +12,7 @@ const Product = ({ item }) => {
         <Title>{item.name}</Title>
         <PriceContainer>
         <Span>Desde:</Span>
-        <Price> {item.price}.00</Price>
+        <Price>S/. {item.price}.00</Price>
         </PriceContainer>
       </InfoContainer>
       <Hover>
@@ -30,4 +30,4 @@ const Product = ({ item }) => {
   )
 }
 
-export default Product
+export default CardProduct

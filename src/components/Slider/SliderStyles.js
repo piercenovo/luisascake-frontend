@@ -58,32 +58,16 @@ export const Image = styled.img`
   ${desktop({ height: '80%' })}
 `
 export const Title = styled.h1`
-  font-size: 4.8rem;
+  font-size: 7rem;
   text-transform: uppercase;
+  color: var(--text-2-color);
+  font-family: 'Amatic SC', cursive;
+  font-weight: 600;
 `
 export const Desc = styled.p`
   margin: 1.5rem 0 2.5rem 0;
   font-size: 2.9rem;
   font-weight: 500;
   letter-spacing: 3px;
+  color: var(--text-color);
 `
-export const Button = styled.button`
-align-self: flex-start;
-padding: 1rem 1.5rem;
-font-weight: 500;
-font-size: 2rem;
-line-height: 18px;
-letter-spacing: 1.54px;
-cursor: pointer;
-background: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
-color: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
-border-radius: 4px;
-white-space: nowrap;
-outline: none;
-border: 2px solid var(--primary-color);
-
-&:hover {
-  color: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
-  background: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
-  transition: all 0.3s ease;
-}`

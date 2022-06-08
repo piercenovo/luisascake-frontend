@@ -44,6 +44,7 @@ const Middlebar = ({ toggleDrawer }) => {
           </Link>
           </MenuItem>
         </Right>
+
       </Wrapper>
     </Container>
   )
