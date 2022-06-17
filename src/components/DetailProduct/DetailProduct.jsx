@@ -7,7 +7,7 @@ const DetailProduct = () => {
     <Container>
       <Wrapper>
         <ImgContainer>
-          <Image src='https://res.cloudinary.com/cloud-digital-asset/image/upload/v1654688069/torta-unicornio_p7bkgc.png' />
+          <Image src='https://res.cloudinary.com/cloud-digital-asset/image/upload/v1654688069/torta-unicornio_p7bkgc.png' alt='Torta de Unicornio' />
         </ImgContainer>
         <InfoContainer>
           <DescriptionContainer>
@@ -47,7 +47,7 @@ const DetailProduct = () => {
               <Amount>1</Amount>
               <Add />
             </AmountContainer>
-            <Button inverse>Añadir al Carrito</Button>
+            <Button primary='true'>Añadir al Carrito</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

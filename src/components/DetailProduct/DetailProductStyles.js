@@ -4,13 +4,14 @@ import { laptop } from '../../styles/globalStyles'
 export const Container = styled.div`
   display: flex;
   margin: 6rem 0;
+  align-items: center;
+  justify-content: center;
 `
 
 export const Wrapper = styled.div`
   padding: 1rem 5rem;
   max-width: 1300px;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +19,7 @@ export const Wrapper = styled.div`
   ${laptop({ flexDirection: 'column-reverse' })}
 `
 
-export const ImgContainer = styled.div`
+export const ImgContainer = styled.figure`
  flex: 1;
  /* display: flex;
  justify-content: flex-end; */

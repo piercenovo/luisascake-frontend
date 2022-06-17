@@ -8,8 +8,8 @@ const Menu = ({ route }) => {
         <NavRoute to="/tienda">{route.name}</NavRoute>
       </MenuButton>
       <SubRoutesContainer>
-        {route.subRoutes.map((subRoute) => (
-          <SubRoute to={subRoute.link} key={subRoute.name}>
+        {route.subRoutes.map((subRoute, index) => (
+          <SubRoute to={subRoute.link} key={index}>
             {subRoute.name}
           </SubRoute>
         ))}

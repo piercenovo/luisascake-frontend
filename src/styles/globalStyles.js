@@ -16,9 +16,10 @@ export const GlobalStyles = createGlobalStyle`
 
         --light-color: #FDEBEB;
         --white-color: #FFFFFF;
+
     }
 
-    *{
+    *, body, html {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -36,19 +37,19 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 60%;
 
     @media (max-width: 968px){
-      font-size: 55%;
+      font-size: 54%;
     }
 
     @media (max-width: 768px){
-      font-size: 52%;
-    }
-
-    @media (max-width: 576px){
       font-size: 50%;
     }
 
+    @media (max-width: 576px){
+      font-size: 46%;
+    }
+
     @media (max-width: 480px){
-      font-size: 45%;
+      font-size: 42%;
     }
     }
 
@@ -74,7 +75,7 @@ export const GlobalStyles = createGlobalStyle`
 
 export const mobile = (props) => {
   return css`
-    @media only screen and (max-width: 480px){
+    @media only screen and (max-width: 479px){
       ${props} 
     }
   `
@@ -82,7 +83,7 @@ export const mobile = (props) => {
 
 export const tablet = (props) => {
   return css`
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 767px){
       ${props} 
     }
   `
@@ -98,147 +99,169 @@ export const laptop = (props) => {
 
 export const desktop = (props) => {
   return css`
-    @media only screen and (max-width: 1024px){
+    @media only screen and (max-width: 1023px){
       ${props} 
     }
   `
 }
 
-export const ContainerGlobal = styled.div`
-    width: 100%;
-    max-width: 1300px;
-    margin-top: 6rem;
-    margin-bottom: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0rem 5rem;
-`
+export const edesktop = (props) => {
+  return css`
+    @media only screen and (min-width: 1024px) and (max-width: 1200px){
+      ${props} 
+    }
+  `
+}
 
 export const MainHeading = styled.h1`
-    font-size: clamp(2.3rem, 6vw, 4.5rem);
-    margin-bottom: 2rem;
-    color: ${({ inverse }) => (inverse ? 'var(--primary-color)' : '#fff')};
-    width: 100%;
-    letter-spacing: 4px;
-    text-align: center;
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  margin-bottom: 2rem;
+  color: ${({ inverse }) => (inverse ? 'var(--primary-color)' : '#fff')};
+  width: 100%;
+  letter-spacing: 4px;
+  text-align: center;
 `
 
 export const Heading = styled.h2`
-    font-size: clamp(1rem, 12vw, 3.3rem);
-    margin: ${({ margin }) => (margin || '')};
-    margin-bottom: ${({ mb }) => (mb || '')};
-    margin-top: ${({ mt }) => (mt || '')};
-    color: ${({ inverse }) => (inverse ? 'var(--secondary-color)' : '#fff')};
-    line-height: 1.06;
-    text-align: center;
-    width: ${({ width }) => (width || '100%')};
-    font-weight: 500;
+  font-size: 3.2rem;
+  margin: ${({ margin }) => (margin || '')};
+  margin-bottom: ${({ mb }) => (mb || '')};
+  margin-top: ${({ mt }) => (mt || '')};
+  color: ${({ inverse }) => (inverse ? 'var(--text-2-color)' : '#fff')};
+  line-height: 1.06;
+  text-align: center;
+  width: ${({ width }) => (width || '100%')};
+  font-weight: 500;
+  text-transform:  ${({ upper }) => (upper ? 'uppercase' : '')};;
 `
 
 export const Subtitle = styled.p`
-    font-size: clamp(1rem, 4vw, 2.2rem);
-    margin: ${({ margin }) => (margin || '')};
-    margin-bottom: ${({ mb }) => (mb || '')};
-    margin-top: ${({ mt }) => (mt || '')};
-    color: var(--secondary-color);
-    line-height: 1.06;
-    text-align: center;
-    width: ${({ width }) => (width || '100%')};
-    font-weight: 400;
+  font-size: 2rem;
+  margin: ${({ margin }) => (margin || '')};
+  margin-bottom: ${({ mb }) => (mb || '')};
+  margin-top: ${({ mt }) => (mt || '')};
+  color: var(--text-color);
+  line-height: 1.06;
+  text-align: center;
+  width: ${({ width }) => (width || '100%')};
+  font-weight: 400;
 `
 
 export const TextWrapper = styled.span`
-    color: ${({ color }) => (color || '')};
-    font-size: ${({ size }) => (size || '')};
-    font-weight: ${({ weight }) => (weight || '')};
-    letter-spacing: ${({ spacing }) => (spacing || '')};
-    padding: ${({ padding }) => (padding || '')};
-    margin: ${({ margin }) => (margin || '')};
-    margin-bottom: ${({ mb }) => (mb || '')};
-    margin-top: ${({ mt }) => (mt || '')};
-    color: var(--secondary-color);
+  color: ${({ color }) => (color || '')};
+  font-size: ${({ size }) => (size || '')};
+  font-weight: ${({ weight }) => (weight || '')};
+  letter-spacing: ${({ spacing }) => (spacing || '')};
+  padding: ${({ padding }) => (padding || '')};
+  margin: ${({ margin }) => (margin || '')};
+  margin-bottom: ${({ mb }) => (mb || '')};
+  margin-top: ${({ mt }) => (mt || '')};
+  color: var(--secondary-color);
 `
 export const Section = styled.section`
-    padding: ${({ padding }) => (padding || '140px 0')};
-    margin: ${({ margin }) => (margin || '')};
-    background: ${({ inverse }) => (inverse ? 'white' : 'var(--light-color)')};
-    position: ${({ position }) => (position || '')};
-    width: ${({ width }) => (width || 'auto')};
-    min-width: ${({ minWidth }) => (minWidth || 'auto')};
-    max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
-    height: ${({ height }) => (height || 'auto')};
-    max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
-    min-height: ${({ minHeight }) => (minHeight || 'auto')};
+  padding: ${({ padding }) => (padding || '140px 0')};
+  margin: ${({ margin }) => (margin || '')};
+  background: ${({ inverse }) => (inverse ? 'white' : 'var(--light-color)')};
+  position: ${({ position }) => (position || '')};
+  width: ${({ width }) => (width || 'auto')};
+  min-width: ${({ minWidth }) => (minWidth || 'auto')};
+  max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
+  height: ${({ height }) => (height || 'auto')};
+  max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
+  min-height: ${({ minHeight }) => (minHeight || 'auto')};
 
-    @media screen and (max-width: 768px) {
-      padding: ${({ smPadding }) => (smPadding || '70px 0')};
-    }
+  @media screen and (max-width: 768px) {
+    padding: ${({ smPadding }) => (smPadding || '70px 0')};
+  }
 `
 
 export const Row = styled.div`
-    display: flex;
-    justify-content: ${({ justify }) => (justify || '')};
-    align-items: ${({ align }) => (align || '')};
-    gap: ${({ gap }) => (gap || '')};
-    padding: ${({ padding }) => (padding || '')};
-    margin: ${({ margin }) => (margin || '')};
-    position: ${({ position }) => (position || '')};
-    width: ${({ width }) => (width || 'auto')};
-    min-width: ${({ minWidth }) => (minWidth || 'auto')};
-    max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
-    height: ${({ height }) => (height || 'auto')};
-    max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
-    min-height: ${({ minHeight }) => (minHeight || 'auto')};
-    flex-wrap: ${({ wrap }) => (wrap || '')};
+  display: flex;
+  justify-content: ${({ justify }) => (justify || '')};
+  align-items: ${({ align }) => (align || '')};
+  gap: ${({ gap }) => (gap || '')};
+  padding: ${({ padding }) => (padding || '')};
+  margin: ${({ margin }) => (margin || '')};
+  position: ${({ position }) => (position || '')};
+  width: ${({ width }) => (width || 'auto')};
+  min-width: ${({ minWidth }) => (minWidth || 'auto')};
+  max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
+  height: ${({ height }) => (height || 'auto')};
+  max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
+  min-height: ${({ minHeight }) => (minHeight || 'auto')};
+  flex-wrap: ${({ wrap }) => (wrap || '')};
 `
 
 export const Column = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: ${({ justify }) => (justify || '')};
-    align-items: ${({ align }) => (align || '')};
-    gap: ${({ gap }) => (gap || '')};
-    padding: ${({ padding }) => (padding || '')};
-    margin: ${({ margin }) => (margin || '')};
-    position: ${({ position }) => (position || '')};
-    width: ${({ width }) => (width || 'auto')};
-    min-width: ${({ minWidth }) => (minWidth || 'auto')};
-    max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
-    height: ${({ height }) => (height || 'auto')};
-    max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
-    min-height: ${({ minHeight }) => (minHeight || 'auto')};
+  display: flex;
+  flex-direction: column;
+  justify-content: ${({ justify }) => (justify || '')};
+  align-items: ${({ align }) => (align || '')};
+  gap: ${({ gap }) => (gap || '')};
+  padding: ${({ padding }) => (padding || '')};
+  margin: ${({ margin }) => (margin || '')};
+  position: ${({ position }) => (position || '')};
+  width: ${({ width }) => (width || 'auto')};
+  min-width: ${({ minWidth }) => (minWidth || 'auto')};
+  max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
+  height: ${({ height }) => (height || 'auto')};
+  max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
+  min-height: ${({ minHeight }) => (minHeight || 'auto')};
 `
-
-export const Button = styled.button`
-align-self: flex-start;
-padding: 1rem 1.5rem;
-font-weight: 500;
-font-size: 1.8rem;
-line-height: 18px;
-letter-spacing: 1px;
-cursor: pointer;
-background: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
-color: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
-border-radius: 4px;
-white-space: nowrap;
-outline: none;
-border: 2px solid var(--primary-color);
-transition: all 0.3s ease-in-out;
-text-transform: uppercase;
-
-&:hover {
-  color: ${({ inverse }) => (inverse ? 'var(--primary-color)' : 'white')};
-  background: ${({ inverse }) => (inverse ? 'white' : 'var(--primary-color)')};
-}`
-
 export const BigText = styled.h1`
   text-align: center;
   font-size: 5.5rem;
   color: var(--primary-color);
 `
-
 export const CenterText = styled.div`
-  height: 90vh;
+  height: 60vh;
   display: grid;
   place-items: center;
+`
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  font-size: ${({ fontBig }) => (fontBig ? '2rem' : '1.6rem')};
+  text-transform: uppercase;
+  padding: ${({ big }) => (big ? '1.2rem 2.1rem' : '.9rem 1.8rem')};
+  background: ${({ primary }) => (primary ? 'var(--primary-color)' : 'white')};
+  color: ${({ primary }) => (primary ? 'white' : 'var(--primary-color)')};
+  white-space: nowrap;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? 'white' : 'var(--primary-color)')}; 
+    color: ${({ primary }) => (primary ? 'var(--primary-color)' : 'white')};
+  }
+`
+
+export const SecondButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: ${({ fontBig }) => (fontBig ? '2rem' : '1.6rem')};
+  text-transform: uppercase;
+  padding: ${({ big }) => (big ? '1.2rem 2.1rem' : '.9rem 1.8rem')};
+  background: ${({ secondary }) => (secondary ? 'var(--light-color)' : 'white')};
+  color: ${({ secondary }) => (secondary ? 'var(--text-color)' : 'var(--primary-color)')};
+  white-space: nowrap;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid var(--light-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? 'var(--primary-color)' : 'white')}; 
+    color: ${({ primary }) => (primary ? 'white' : 'var(--primary-color)')};
+  }
 `

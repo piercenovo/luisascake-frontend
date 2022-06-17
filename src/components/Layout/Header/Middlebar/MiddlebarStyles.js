@@ -5,13 +5,14 @@ export const Container = styled.div`
   height: 75px;
   background-color: var(--accent-color-3);
   display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const Wrapper = styled.div`
   padding: 1rem 5rem;
   max-width: 1300px;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;

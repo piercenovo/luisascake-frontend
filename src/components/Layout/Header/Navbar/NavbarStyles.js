@@ -15,13 +15,16 @@ export const DrawerButton = styled.button`
 
 export const Nav = styled.nav`
   background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `
 
 export const NavbarContainer = styled.div`
   padding: 1rem;
   height: 60px;
   max-width: 1300px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,4 +86,8 @@ export const Image = styled.img`
   width: 100%;
   object-fit: cover;
   height: 30px;
+`
+
+export const HeaderContainer = styled.header`
+
 `

@@ -21,7 +21,7 @@ const MainProduct = () => {
       </FilterContainer>
       <Container>
         {products.map((product) => (
-          <CardProduct item={product} key={product.id} />
+          <CardProduct key={product.id} {...product} />
         ))}
       </Container>
     </Main>

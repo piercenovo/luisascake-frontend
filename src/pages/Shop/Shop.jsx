@@ -1,4 +1,5 @@
 import Helmet from 'react-helmet'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 // import { useLocation } from 'react-router-dom'
 import Products from '../../components/Products/Products'
 
@@ -8,8 +9,14 @@ const Shop = () => {
   return (
     <>
       <Helmet>
-        <title>Tienda</title>
+        <title>Tienda - Luisa's Cake</title>
       </Helmet>
+      <Breadcrumb
+      firstLink={'/'}
+      firstName={'Home'}
+      secondName={'Tienda'}
+      title={'Tienda'}
+      />
       <Products />
     </>
 

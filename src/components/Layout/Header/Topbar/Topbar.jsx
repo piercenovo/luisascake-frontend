@@ -1,9 +1,11 @@
-import { Container } from './TopbarStyles'
+import { Container, Wrapper } from './TopbarStyles'
 
 const Topbar = () => {
   return (
     <Container>
-      Super descuento en pasteles por el Día del Padre
+      <Wrapper>
+        Super descuento en pasteles por el Día del Padre
+      </Wrapper>
     </Container>
   )
 }

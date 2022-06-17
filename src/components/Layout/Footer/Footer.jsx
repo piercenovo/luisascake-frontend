@@ -5,44 +5,49 @@ import {
   FooterRights,
   FooterWrapper,
   FooterGrid,
-  FooterContact
+  FooterContact,
+  Container,
+  FooterContactExtra
 } from './FooterStyles'
 import { routes, routesClient, routesContact } from '../../../data/RoutersData'
-import { Section } from '../../../styles/globalStyles'
+// import { Section } from '../../../styles/globalStyles'
 
 function Footer () {
   return (
-    <Section padding="4rem 0 2rem 0">
+      <Container padding="4rem 0 0rem 0">
       <FooterWrapper>
         <FooterGrid justify="space-between">
             <FooterLinkItems>
               <FooterLinkTitle>Luisa's Cake</FooterLinkTitle>
-              {routes.map((route) => (
-                <FooterLink key={route.name} to={route.link}>
+              {routes.map((route, index) => (
+                <FooterLink key={index} to={route.link}>
                   {route.name}
                 </FooterLink>
               ))}
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Cliente</FooterLinkTitle>
-              {routesClient.map((route) => (
-                <FooterLink key={route.name} to={route.link}>
+              {routesClient.map((route, index) => (
+                <FooterLink key={index} to={route.link}>
                   {route.name}
                 </FooterLink>
               ))}
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Contacto</FooterLinkTitle>
-              {routesContact.map((route) => (
-                <FooterContact key={route.name} target={route.target} href={route.link} rel="noreferrer">
+              {routesContact.map((route, index) => (
+                <FooterContact key={index} target={route.target} href={route.link} rel="noreferrer">
                   {route.name}
                 </FooterContact>
               ))}
+              <FooterContactExtra>
+                De Lunes a Domingo de 8:00 am a 7:00 pm
+              </FooterContactExtra>
             </FooterLinkItems>
         </FooterGrid>
         <FooterRights>© 2022 Luisa’s Cake. Todos los derechos reservados.</FooterRights>
       </FooterWrapper>
-    </Section>
+    </Container>
   )
 }
 

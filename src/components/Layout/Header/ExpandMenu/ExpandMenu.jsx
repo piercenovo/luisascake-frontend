@@ -1,5 +1,5 @@
+import { KeyboardArrowDown, KeyboardArrowRight } from '@material-ui/icons'
 import { useState } from 'react'
-import { FaAngleDown, FaAngleRight } from 'react-icons/fa'
 import { SMenu, MenuButton, SubRoutesContainer, SubRoute } from './ExpandMenuStyles'
 
 const ExpandMenu = ({ route }) => {
@@ -8,15 +8,15 @@ const ExpandMenu = ({ route }) => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const iconStyle = { color: 'var(--primary-color)' }
+  const iconStyle = { color: 'var(--primary-color)', fontSize: '22px' }
   return (
     <SMenu>
       <MenuButton onClick={toggleMenu}>
-        {route.name} {isMenuOpen ? <FaAngleDown style={iconStyle} /> : <FaAngleRight style={iconStyle} />}
+        {route.name} {isMenuOpen ? <KeyboardArrowDown style={iconStyle} /> : <KeyboardArrowRight style={iconStyle} />}
       </MenuButton>
       <SubRoutesContainer isOpen={isMenuOpen}>
-        {route.subRoutes.map((subRoute) => (
-          <SubRoute to={subRoute.link} key={subRoute.name}>
+        {route.subRoutes.map((subRoute, index) => (
+          <SubRoute to={subRoute.link} key={index}>
             {subRoute.name}
           </SubRoute>
         ))}

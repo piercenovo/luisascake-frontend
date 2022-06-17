@@ -27,7 +27,7 @@ export const Container = styled.div`
     opacity: 1;
   }
 `
-export const ImgContainer = styled.div`
+export const ImgContainer = styled.figure`
   height: 100%;
   flex: 2;
 `
@@ -43,13 +43,16 @@ export const InfoContainer = styled.div`
 export const Image = styled.img`
   width: 100%;
   z-index: 2;
+  
 `
-
 export const Title = styled.p`
   color: var(--text-2-color);
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  text-align: center;
+  /* padding-left: 5rem;
+  padding-right: 5rem; */
 `
 
 export const PriceContainer = styled.div`

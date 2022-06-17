@@ -13,19 +13,19 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
       <SDrawer isOpen={isOpen}>
         <SearchContainer>
             <Input placeholder='Buscar'/>
-            <Search style={{ fontSize: 16, color: 'var(--accent-color-2)' }} />
+            <Search style={{ fontSize: 18, color: 'var(--accent-color-3)' }} />
         </SearchContainer>
         <RightNav>
           <NavRoutes>
-            {routes.map((route) => {
+            {routes.map((route, index) => {
               if (route.subRoutes) {
-                return <ExpandMenu route={route} key={route.name}/>
+                return <ExpandMenu route={route} key={index}/>
               }
               return (
                 <NavRoute
                   onClick={toggleDrawer}
                   to={route.link}
-                  key={route.name}
+                  key={index}
                 >
                   {route.name}
                 </NavRoute>
@@ -33,7 +33,7 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
             })}
           </NavRoutes>
           <Link to='/ingresar' onClick={toggleDrawer} >
-            <Button inverse>Ingresar</Button>
+            <Button primary='true'>Ingresar</Button>
           </Link>
         </RightNav>
       </SDrawer>

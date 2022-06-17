@@ -5,7 +5,7 @@ const Search = () => {
   return (
     <>
       <Helmet>
-        <title>Búsqueda</title>
+        <title>Búsqueda - Luisa's Cake</title>
       </Helmet>
       <CenterText>
       <BigText>Búsqueda</BigText>

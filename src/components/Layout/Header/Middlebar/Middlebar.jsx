@@ -12,7 +12,7 @@ const Middlebar = ({ toggleDrawer }) => {
       <Wrapper>
         <Left>
           <DrawerButton onClick={toggleDrawer}>
-            <MenuOutlined style={{ color: 'var(--text-color)', fontSize: '22px' }}/>
+            <MenuOutlined style={{ color: 'var(--text-color)', fontSize: '24px' }}/>
           </DrawerButton>
         </Left>
         <Center>
@@ -27,7 +27,7 @@ const Middlebar = ({ toggleDrawer }) => {
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to='/favoritos'>
+            <Link to='/mis-favoritos'>
               <FavoriteBorderOutlined style={iconStyles} />
             </Link>
           </MenuItem>

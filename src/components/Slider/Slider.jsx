@@ -1,7 +1,8 @@
-import { KeyboardArrowLeftOutlined, KeyboardArrowRightOutlined } from '@material-ui/icons'
+import { ArrowForward, ArrowForwardIos, KeyboardArrowLeftOutlined, KeyboardArrowRightOutlined } from '@material-ui/icons'
 import { useState } from 'react'
 import { Button } from '../../styles/globalStyles'
 import { Arrow, Container, Desc, Image, ImgContainer, InfoContainer, Slide, Title, Wrapper } from './SliderStyles'
+import { useNavigate } from 'react-router-dom'
 
 const Slider = ({ sliders }) => {
   const iconStyles = { color: 'var(--text-2-color)', fontSize: '30px' }
@@ -14,6 +15,14 @@ const Slider = ({ sliders }) => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
     }
   }
+
+  const [hover, setHover] = useState(false)
+
+  const onHover = () => {
+    setHover(!hover)
+  }
+
+  const navigate = useNavigate()
   return (
     <Container>
       <Arrow direction='left' onClick={() => handleClick('left')} >
@@ -29,7 +38,12 @@ const Slider = ({ sliders }) => {
               <InfoContainer>
                 <Title>{slider.title}</Title>
                 <Desc>{slider.desc}</Desc>
-                <Button inverse>{slider.button}</Button>
+                <Button
+                onMouseEnter={onHover}
+                onMouseLeave={onHover}
+                primary='true'
+                onClick={() => navigate(slider.link)}
+                >{slider.button} {hover ? <ArrowForward /> : <ArrowForwardIos /> } </Button>
               </InfoContainer>
             </Slide>
             )

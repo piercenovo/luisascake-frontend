@@ -48,6 +48,29 @@ export const routes = [
   }
 ]
 
+export const categories = [
+  {
+    name: 'Tortas',
+    link: 'categoria/tortas'
+  },
+  {
+    name: 'Postres',
+    link: 'categoria/postres'
+  },
+  {
+    name: 'Cheesecakes',
+    link: 'categoria/cheesecakes'
+  },
+  {
+    name: 'Bocaditos',
+    link: 'categoria/bocaditos'
+  },
+  {
+    name: 'Packs',
+    link: 'categoria/packs'
+  }
+]
+
 export const routesClient = [
   {
     name: 'Servicio al cliente',
@@ -77,11 +100,6 @@ export const routesContact = [
     name: 'pastelerialuisascake@gmail.com',
     link: 'mailto:pastelerialuisascake@gmail.com',
     target: '_blank'
-  },
-  {
-    name: 'De Lunes a Domingo de 8:00 am a 7:00 pm',
-    link: '',
-    target: ''
   },
   {
     name: 'Jr. Colón #791',

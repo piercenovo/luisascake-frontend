@@ -1,12 +1,12 @@
 import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Suspense, lazy } from 'react'
 
 // Layout
 import Header from './components/Layout/Header/Header'
 import Footer from './components/Layout/Footer/Footer'
 
 // Pages
-import Home from './pages/Home'
 import About from './pages/About'
 import Shop from './pages/Shop/Shop'
 import GiveWithLove from './pages/GiveWithLove'
@@ -26,12 +26,16 @@ import Cheesecakes from './pages/Shop/Cheesecakes'
 import Snacks from './pages/Shop/Snacks'
 import Packs from './pages/Shop/Packs'
 import DetailsProduct from './pages/DetailsProduct'
+import PageNotFound from './pages/PageNotFound'
+import Loading from './components/Loading/Loading'
+
+const Home = lazy(() => import('./pages/Home'))
 
 const App = () => {
   return (
     <>
       <Helmet>
-        <title>Luisa's Cake | Pastelería y Repostería</title>
+        <title>Luisa's Cake - Pastelería y Repostería</title>
         <meta
         name="description"
         content="Siéntete en casa con las recetas de Luisa. Usamos ingredientes seleccionados
@@ -40,11 +44,13 @@ const App = () => {
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <Router>
+        <Suspense fallback={<Loading />}>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="nosotros" element={<About />} />
         <Route path="tienda" element={<Shop />} />
+        <Route path="tienda/:category" element={<Shop />} />
         <Route path="tienda/tortas" element={<Cakes />} />
         <Route path="tienda/postres" element={<Desserts />} />
         <Route path="tienda/cheesecakes" element={<Cheesecakes />} />
@@ -58,14 +64,15 @@ const App = () => {
         <Route path="terminos-y-condiciones" element={<TermsAndConditions />} />
         <Route path="libro-de-reclamaciones" element={<ComplaintsBook />} />
         <Route path="ingresar" element={<SignIn />} />
-        <Route path="favoritos" element={<Favorites />} />
+        <Route path="mis-favoritos" element={<Favorites />} />
         <Route path="carrito-de-compras" element={<ShoppingCart />} />
         <Route path="busqueda" element={<Search />} />
-
-        <Route path="productos/:category" element={<Shop />} />
         <Route path="producto/:id" element={<DetailsProduct />} />
+
+        <Route path="*" element={<PageNotFound/>} />
       </Routes>
       <Footer />
+   </Suspense>
     </Router>
     </>
   )

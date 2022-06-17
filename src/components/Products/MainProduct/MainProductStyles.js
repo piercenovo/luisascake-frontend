@@ -14,18 +14,15 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 3.4rem;
   padding: 0rem 5rem;
-  /* background-color: blue; */
   ${desktop({ flexDirection: 'column-reverse' })}
 `
 
 export const Main = styled.main`
   flex-grow: 1;
-  /* background-color: green; */
 `
 
 export const Container = styled.div`
   width: 100%;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: 1rem;

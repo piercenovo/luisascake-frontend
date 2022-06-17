@@ -2,15 +2,19 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { tablet } from '../../../styles/globalStyles'
 
-export const FooterContainer = styled.div`
-  background-color: #101522;
-  padding: 4rem 0 2rem 0;
+export const Container = styled.footer`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--light-color);
 `
 
 export const FooterWrapper = styled.div`
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: 1300px;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
 `
 
 export const FooterGrid = styled.div`
@@ -33,13 +37,13 @@ export const FooterLinkItems = styled.div`
 `
 
 export const FooterLinkTitle = styled.h2`
-  margin-bottom: 16px;
+  margin-bottom: 1.2rem;
 `
 
 export const FooterLink = styled(Link)`
   color: var(--text-color);
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: .7rem;
 
   &:hover {
     color: var(--text-2-color);
@@ -50,7 +54,18 @@ export const FooterLink = styled(Link)`
 export const FooterContact = styled.a`
   color: var(--text-color);
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: .7rem;
+
+  &:hover {
+    color: var(--text-2-color);
+    transition: 0.3s ease-out;
+  }
+`
+
+export const FooterContactExtra = styled.span`
+  color: var(--text-color);
+  text-decoration: none;
+  margin-bottom: .7rem;
 
   &:hover {
     color: var(--text-2-color);
@@ -60,11 +75,11 @@ export const FooterContact = styled.a`
 
 export const FooterRights = styled.div`
   color: var(--text-color);
-  margin-bottom: 16px;
   width: 100%;
   font-size: 1.2rem;
   text-align: center;
   border-top: 1px solid var(--text-color);
-  padding: 1rem 0;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   margin-top: 1rem;
 `

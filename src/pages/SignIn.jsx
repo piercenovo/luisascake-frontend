@@ -5,7 +5,7 @@ const SignIn = () => {
   return (
     <>
       <Helmet>
-        <title>Ingresar</title>
+        <title>Ingresar - Luisa's Cake</title>
       </Helmet>
       <CenterText>
       <BigText>Ingresar</BigText>

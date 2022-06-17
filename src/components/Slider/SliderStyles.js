@@ -1,14 +1,16 @@
 import styled from 'styled-components'
-import { desktop, tablet } from '../../styles/globalStyles'
+import { desktop, laptop, tablet, edesktop } from '../../styles/globalStyles'
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
-  height: 70vh;
+  height: 65vh;
+  min-height: 600px;
   display: flex;
   position: relative;
   overflow: hidden;
-  ${desktop({ height: '30vh' })}
   ${tablet({ display: 'none' })}
+  ${desktop({ height: '30vh', minHeight: '300px' })}
+  ${edesktop({ height: '45vh', minHeight: '400px' })}
 `
 
 export const Arrow = styled.div`
@@ -27,7 +29,6 @@ export const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   z-index: 2;
-  ${desktop({ bottom: '40%' })}
 `
 
 export const Wrapper = styled.div`
@@ -38,24 +39,26 @@ export const Wrapper = styled.div`
 `
 export const Slide = styled.div`
   width: 100vw;
-  /* height: 100vh; */
+  height: 100%;
   display: flex;
   align-items:center;
   background-color: #${props => props.bg};
-  ${desktop({ height: '100%' })}
+  /* ${desktop({ height: '100%' })} */
 `
-export const ImgContainer = styled.div`
+export const ImgContainer = styled.figure`
   height: 100%;
   flex: 1;
 `
 export const InfoContainer = styled.div`
   flex: 1;
-  padding: 2rem 7.5rem 2rem 0;
+  padding-right: 7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   ${desktop({ height: '90%' })}
 `
 export const Image = styled.img`
   height: 100%;
-  ${desktop({ height: '80%' })}
 `
 export const Title = styled.h1`
   font-size: 7rem;
@@ -63,6 +66,7 @@ export const Title = styled.h1`
   color: var(--text-2-color);
   font-family: 'Amatic SC', cursive;
   font-weight: 600;
+  ${desktop({ fontSize: '5rem' })}
 `
 export const Desc = styled.p`
   margin: 1.5rem 0 2.5rem 0;
@@ -70,4 +74,5 @@ export const Desc = styled.p`
   font-weight: 500;
   letter-spacing: 3px;
   color: var(--text-color);
+  ${laptop({ fontSize: '2.3rem' })}
 `

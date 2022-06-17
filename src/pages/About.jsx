@@ -1,17 +1,22 @@
 import { Helmet } from 'react-helmet'
-import { BigText, CenterText } from '../styles/globalStyles'
-// import BreadCrumb from '../components/BreadCrumb/BreadCrumb'
+import HistorySection from '../components/HistorySection/HistorySection'
+import MissionSection from '../components/MissionSection/MissionSection'
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 
 const About = () => {
   return (
     <>
       <Helmet>
-        <title>Nosotros</title>
+        <title>Nosotros - Luisa's Cake</title>
       </Helmet>
-      {/* <BreadCrumb></BreadCrumb> */}
-      <CenterText>
-      <BigText>Nosotros</BigText>
-      </CenterText>
+      <Breadcrumb
+      firstLink={'/'}
+      firstName={'Home'}
+      secondName={'Nosotros'}
+      title={'Nosotros'}
+      />
+      <HistorySection />
+      <MissionSection />
     </>
   )
 }

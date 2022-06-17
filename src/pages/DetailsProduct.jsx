@@ -5,7 +5,7 @@ const DetailsProduct = () => {
   return (
     <>
       <Helmet>
-        <title>Producto</title>
+        <title>Producto - Luisa's Cake</title>
       </Helmet>
       <DetailProduct />
     </>

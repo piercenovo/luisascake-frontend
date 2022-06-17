@@ -9,7 +9,7 @@ export const SubRoutesContainer = styled.div`
 export const SMenu = styled.div``
 
 export const MenuButton = styled.div`
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   padding: 0.5rem;
   font-weight: 500;
   display: flex;
@@ -23,7 +23,7 @@ export const SubRoute = styled(Link)`
   text-decoration: none;
   color: var(--text-color);
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
   margin: 2px;
 
