@@ -25,50 +25,52 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    *::before, *::after {
+        box-sizing: border-box;
+    }
+
     html {
       scrollbar-width: normal;
       scrollbar-color: var(--accent-color-3) var(--light-color);
-    }
 
-    html, body{
-    font-family: 'Montserrat', sans-serif;
-    background: var(--mainColor);
-    color: var(--textColor);
-    font-size: 60%;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--mainColor);
+      color: var(--textColor);
+      font-size: 60%;
 
-    @media (max-width: 968px){
-      font-size: 54%;
-    }
+      @media (max-width: 968px){
+        font-size: 54%;
+      }
 
-    @media (max-width: 768px){
-      font-size: 50%;
-    }
+      @media (max-width: 768px){
+        font-size: 50%;
+      }
 
-    @media (max-width: 576px){
-      font-size: 46%;
-    }
+      @media (max-width: 576px){
+        font-size: 46%;
+      }
 
-    @media (max-width: 480px){
-      font-size: 42%;
-    }
-    }
+      @media (max-width: 480px){
+        font-size: 44%;
+      }
+      }
 
-    body{
-      font-size: 1.6rem;
-    }
+      body{
+        font-size: 1.6rem;
+      }
 
-    a{
-      text-decoration: none;
-      color: var(--text-2-color);
-    }
+      a{
+        text-decoration: none;
+        color: var(--text-2-color);
+      }
 
-    ::selection {
-    background: var(--accent-color-2);
-    color: white;
-
-    ::-moz-selection {
+      ::selection {
       background: var(--accent-color-2);
-    color: white;
+      color: white;
+
+      ::-moz-selection {
+        background: var(--accent-color-2);
+      color: white;
   }
 }
 `
@@ -147,67 +149,6 @@ export const Subtitle = styled.p`
   font-weight: 400;
 `
 
-export const TextWrapper = styled.span`
-  color: ${({ color }) => (color || '')};
-  font-size: ${({ size }) => (size || '')};
-  font-weight: ${({ weight }) => (weight || '')};
-  letter-spacing: ${({ spacing }) => (spacing || '')};
-  padding: ${({ padding }) => (padding || '')};
-  margin: ${({ margin }) => (margin || '')};
-  margin-bottom: ${({ mb }) => (mb || '')};
-  margin-top: ${({ mt }) => (mt || '')};
-  color: var(--secondary-color);
-`
-export const Section = styled.section`
-  padding: ${({ padding }) => (padding || '140px 0')};
-  margin: ${({ margin }) => (margin || '')};
-  background: ${({ inverse }) => (inverse ? 'white' : 'var(--light-color)')};
-  position: ${({ position }) => (position || '')};
-  width: ${({ width }) => (width || 'auto')};
-  min-width: ${({ minWidth }) => (minWidth || 'auto')};
-  max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
-  height: ${({ height }) => (height || 'auto')};
-  max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
-  min-height: ${({ minHeight }) => (minHeight || 'auto')};
-
-  @media screen and (max-width: 768px) {
-    padding: ${({ smPadding }) => (smPadding || '70px 0')};
-  }
-`
-
-export const Row = styled.div`
-  display: flex;
-  justify-content: ${({ justify }) => (justify || '')};
-  align-items: ${({ align }) => (align || '')};
-  gap: ${({ gap }) => (gap || '')};
-  padding: ${({ padding }) => (padding || '')};
-  margin: ${({ margin }) => (margin || '')};
-  position: ${({ position }) => (position || '')};
-  width: ${({ width }) => (width || 'auto')};
-  min-width: ${({ minWidth }) => (minWidth || 'auto')};
-  max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
-  height: ${({ height }) => (height || 'auto')};
-  max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
-  min-height: ${({ minHeight }) => (minHeight || 'auto')};
-  flex-wrap: ${({ wrap }) => (wrap || '')};
-`
-
-export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: ${({ justify }) => (justify || '')};
-  align-items: ${({ align }) => (align || '')};
-  gap: ${({ gap }) => (gap || '')};
-  padding: ${({ padding }) => (padding || '')};
-  margin: ${({ margin }) => (margin || '')};
-  position: ${({ position }) => (position || '')};
-  width: ${({ width }) => (width || 'auto')};
-  min-width: ${({ minWidth }) => (minWidth || 'auto')};
-  max-width: ${({ maxWidth }) => (maxWidth || 'auto')};
-  height: ${({ height }) => (height || 'auto')};
-  max-height: ${({ maxHeight }) => (maxHeight || 'auto')};
-  min-height: ${({ minHeight }) => (minHeight || 'auto')};
-`
 export const BigText = styled.h1`
   text-align: center;
   font-size: 5.5rem;
@@ -223,10 +164,10 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: flex-start;
-  font-size: ${({ fontBig }) => (fontBig ? '2rem' : '1.6rem')};
+  align-self: ${({ normal }) => (normal ? 'normal' : 'flex-start')};
+  font-size: ${({ fontBig }) => (fontBig ? '2rem' : '1.5rem')};
   text-transform: uppercase;
-  padding: ${({ big }) => (big ? '1.2rem 2.1rem' : '.9rem 1.8rem')};
+  padding: ${({ big }) => (big ? '1.2rem 2.1rem' : '1rem 1.5rem')};
   background: ${({ primary }) => (primary ? 'var(--primary-color)' : 'white')};
   color: ${({ primary }) => (primary ? 'white' : 'var(--primary-color)')};
   white-space: nowrap;
@@ -240,16 +181,17 @@ export const Button = styled.button`
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? 'white' : 'var(--primary-color)')}; 
     color: ${({ primary }) => (primary ? 'var(--primary-color)' : 'white')};
+  border: ${({ bordeOut }) => (bordeOut ? '2px solid white' : '2px solid var(--primary-color)')};
   }
 `
 
-export const SecondButton = styled.button`
+export const SecondaryButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: ${({ fontBig }) => (fontBig ? '2rem' : '1.6rem')};
+  font-size: ${({ fontBig }) => (fontBig ? '2rem' : '1.5rem')};
   text-transform: uppercase;
-  padding: ${({ big }) => (big ? '1.2rem 2.1rem' : '.9rem 1.8rem')};
+  padding: ${({ big }) => (big ? '1.2rem 2.1rem' : '1rem 1.8rem')};
   background: ${({ secondary }) => (secondary ? 'var(--light-color)' : 'white')};
   color: ${({ secondary }) => (secondary ? 'var(--text-color)' : 'var(--primary-color)')};
   white-space: nowrap;

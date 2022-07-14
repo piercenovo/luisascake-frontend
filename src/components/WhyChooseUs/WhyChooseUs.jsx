@@ -1,7 +1,7 @@
 import { Heading } from '../../styles/globalStyles'
 import { Container, ContentContainer, Desc, Image, ImgContainer, InfoContainer, Title, WhyChooseUsWrapper, Wrapper } from './WhyChooseUsStyles'
-import Care from '../../../assets/svg/care.svg'
-import Quality from '../../../assets/svg/quality.svg'
+import Care from '../../assets/svg/care.svg'
+import Quality from '../../assets/svg/quality.svg'
 
 const WhyChooseUs = () => {
   return (

@@ -9,12 +9,11 @@ import {
   Container,
   FooterContactExtra
 } from './FooterStyles'
-import { routes, routesClient, routesContact } from '../../../data/RoutersData'
-// import { Section } from '../../../styles/globalStyles'
+import { routes, routesClient, routesContact } from '../../../data/RouterData'
 
 function Footer () {
   return (
-      <Container padding="4rem 0 0rem 0">
+      <Container>
       <FooterWrapper>
         <FooterGrid justify="space-between">
             <FooterLinkItems>

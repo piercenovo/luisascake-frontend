@@ -1,12 +1,12 @@
 
 import { Button } from '../../../../styles/globalStyles'
-import ExpandMenu from '../ExpandMenu/ExpandMenu'
 import { Input, SearchContainer, SDrawer, Backdrop, NavRoutes, NavRoute, RightNav } from '../Drawer/DrawerStyles'
 
 import { Search } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
+import ExpandMenu from '../ExpandMenu/ExpandMenu'
 
-const Drawer = ({ isOpen, toggleDrawer, routes }) => {
+const Drawer = ({ isOpen, toggleDrawer, routes, categories }) => {
   return (
     <>
       {isOpen && <Backdrop onClick={toggleDrawer} />}
@@ -18,11 +18,13 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
         <RightNav>
           <NavRoutes>
             {routes.map((route, index) => {
-              if (route.subRoutes) {
-                return <ExpandMenu route={route} key={index}/>
+              if (route.link === 'tienda') {
+                return (
+                    <ExpandMenu categories={categories} key={categories} />
+                )
               }
               return (
-                <NavRoute
+                  <NavRoute
                   onClick={toggleDrawer}
                   to={route.link}
                   key={index}

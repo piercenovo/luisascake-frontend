@@ -1,18 +1,18 @@
-import { Center, Container, Left, Right, Wrapper, Logo, MenuItem } from './MiddlebarStyles'
-import LuisasLogo from '../../../../../assets/svg/logo.svg'
+import { Center, Container, Left, Right, Wrapper, Logo, MenuItem, iconStylesTwo, iconStyles, StyledBadge } from './MiddlebarStyles'
+import LuisasLogo from '../../../../assets/svg/logo.svg'
 import { Search, ShoppingCartOutlined, FavoriteBorderOutlined, MenuOutlined } from '@material-ui/icons'
-import { Badge } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import { DrawerButton } from '../Navbar/NavbarStyles'
+import { useSelector } from 'react-redux'
 
 const Middlebar = ({ toggleDrawer }) => {
-  const iconStyles = { color: 'var(--text-2-color)', fontSize: '26px' }
+  const quantity = useSelector(state => state.cart.quantity)
   return (
     <Container>
       <Wrapper>
         <Left>
           <DrawerButton onClick={toggleDrawer}>
-            <MenuOutlined style={{ color: 'var(--text-color)', fontSize: '24px' }}/>
+            <MenuOutlined style={iconStylesTwo}/>
           </DrawerButton>
         </Left>
         <Center>
@@ -22,20 +22,15 @@ const Middlebar = ({ toggleDrawer }) => {
         </Center>
         <Right>
           <MenuItem>
-            <Link to='/ingresar'>
-              Ingresar
-            </Link>
-          </MenuItem>
-          <MenuItem>
             <Link to='/mis-favoritos'>
               <FavoriteBorderOutlined style={iconStyles} />
             </Link>
           </MenuItem>
           <MenuItem>
           <Link to='/carrito-de-compras'>
-            <Badge badgeContent={4} color="primary" overlap="rectangular">
+            <StyledBadge badgeContent={quantity} overlap="rectangular">
               <ShoppingCartOutlined style={iconStyles} />
-            </Badge>
+            </StyledBadge>
           </Link>
           </MenuItem>
           <MenuItem>

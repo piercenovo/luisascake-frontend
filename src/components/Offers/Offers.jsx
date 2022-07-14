@@ -1,6 +1,6 @@
-import { offers } from '../../data/OffersData'
+import { offers } from '../../data/OfferData'
 import { Heading, Subtitle } from '../../styles/globalStyles'
-import CardOffer from '../CardOffer/CardOffer'
+import OfferCard from '../OfferCard/OfferCard'
 import { Container, OffersWrapper, Wrapper } from './OffersStyles'
 
 const Offers = () => {
@@ -11,7 +11,7 @@ const Offers = () => {
         <Subtitle mb='1.5rem'>En Luisa's Cake te brindamos las siguientes categorías</Subtitle>
         <Wrapper>
         {offers.map((offer) => (
-          <CardOffer key={offer.id} {...offer} />
+          <OfferCard key={offer.id} {...offer} />
         ))}
         </Wrapper>
       </OffersWrapper>

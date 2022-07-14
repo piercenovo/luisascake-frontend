@@ -30,8 +30,8 @@ export const TitleContainer = styled.div`
 
 `
 export const Title = styled.h1`
-  font-size: 6.2rem;
-  /* text-transform: uppercase; */
+  font-size: 6rem;
+  text-transform: capitalize;
   letter-spacing: -1px;
   color: var(--text-2-color);
   font-weight: 500;
@@ -41,23 +41,27 @@ export const Title = styled.h1`
 `
 
 export const CrumbLink = styled(Link)`
-margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 `
 
 export const Crumb = styled.div`
-margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 `
-
 export const TextCrumb = styled.span`
-font-size: 1.6rem;
-text-transform: uppercase;
-color: var(--text-color);
-
-  &::last-child{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  transition: 0.2s ease-out;
   color: var(--primary-color);
-}
-`
+  
+  &:first-child{
+    color: var(--text-color);
+  }
 
+  &:hover{
+    color: var(--primary-color);
+    transition: 0.2s ease-out;
+  }
+`
 export const Slash = styled.span`
 padding-left: 1rem;
 padding-right: 1rem;

@@ -1,6 +1,5 @@
 import { Container, Desc, Image, ImgContainer, InfoContainer, InfoLink, Input, SearchContainer, Title, Wrapper } from './Error404Styles'
-import Error404Svg from '../../../assets/svg/404.svg'
-// import { Search } from '@material-ui/icons'
+import Error404Svg from '../../assets/svg/404.svg'
 
 const Error404 = () => {
   return (

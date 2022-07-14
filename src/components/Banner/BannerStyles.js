@@ -15,9 +15,6 @@ export const Wrapper = styled.div`
   padding-left: 5rem;
   margin-top: 2rem;
   margin-bottom: 6rem;
-  /* background-color: var(--accent-color-2); */
-  /* background: rgb(241,142,159);
-background: radial-gradient(circle, rgba(241,142,159,1) 0%, rgba(246,180,191,1) 95%); */
 
   ${tablet({ flexDirection: 'column' })}
   `

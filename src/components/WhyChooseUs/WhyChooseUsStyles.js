@@ -28,6 +28,10 @@ export const Wrapper = styled.div`
   flex-direction: row;
 
   ${tablet({ alignItems: 'center', flexDirection: 'column' })}
+
+  &:last-child{
+    order: 1;
+  }
   
 `
 
@@ -70,23 +74,23 @@ export const InfoContainer = styled.figure`
 `
 
 export const Image = styled.img`
-  width: 90%;
+  width: 80%;
   height: 100%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.20));
 
-  ${tablet({ width: '80%' })}
+  ${tablet({ width: '70%' })}
 
 `
 
 export const Title = styled.h3`
-  font-size: 3.2rem;
+  font-size: 2.9rem;
   flex: 1;
   margin-bottom: 2rem;
   color: var(--text-2-color);
   font-weight: 500;
 `
 export const Desc = styled.p`
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   flex: 2;
   margin-bottom: 1rem;
   color: var(--text-color);

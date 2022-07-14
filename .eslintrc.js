@@ -27,6 +27,7 @@ module.exports = {
     'react/prop-types': 'off',
     'no-template-curly-in-string': 'off',
     'react/no-unescaped-entities': 'off',
-    'react/jsx-key': 'off'
+    'react/jsx-key': 'off',
+    camelcase: 'off'
   }
 }

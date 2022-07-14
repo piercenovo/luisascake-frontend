@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { SecondButton } from '../../styles/globalStyles'
+import { SecondaryButton } from '../../styles/globalStyles'
 import { Container, Desc, Image, ImgContainer, InfoContainer, InfoWrapper, Title, Wrapper } from './BannerStyles'
 
 const Banner = ({ id, title, desc, img, imgStart, alt, buttonLabel, link }) => {
@@ -14,7 +14,7 @@ const Banner = ({ id, title, desc, img, imgStart, alt, buttonLabel, link }) => {
           <InfoWrapper imgStart={imgStart ? 1 : 0}>
             <Title>{title}</Title>
             <Desc>{desc}</Desc>
-            <SecondButton secondary='true' onClick={() => navigate(link)}>{buttonLabel}</SecondButton>
+            <SecondaryButton secondary='true' onClick={() => navigate(link)}>{buttonLabel}</SecondaryButton>
           </InfoWrapper>
         </InfoContainer>
       </Wrapper>
