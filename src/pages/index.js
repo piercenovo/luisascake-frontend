@@ -14,10 +14,11 @@ import ComplaintsBook from './ComplaintsBook/ComplaintsBook'
 import Favorites from './Favorites/Favorites'
 import Search from './Search/Search'
 import ShoppingCart from './ShoppingCart/ShoppingCart'
+import Checkout from './Checkout/Checkout'
 import SignIn from './SignIn/SignIn'
 import PageNotFound from './PageNotFound/PageNotFound'
 import CategoryDetail from './CategoryDetail/CategoryDetail'
 import ProductDetail from './ProductDetail/ProductDetail'
 import SignUp from './SignUp/SignUp'
 
-export { Home, About, Shop, GiveWithLove, SpecialOrders, Contact, CustomerService, PrivacyPolicies, TermsAndConditions, ComplaintsBook, Favorites, Search, ShoppingCart, SignIn, PageNotFound, CategoryDetail, ProductDetail, SignUp }
+export { Home, About, Shop, GiveWithLove, SpecialOrders, Contact, CustomerService, PrivacyPolicies, TermsAndConditions, ComplaintsBook, Favorites, Search, ShoppingCart, Checkout, SignIn, PageNotFound, CategoryDetail, ProductDetail, SignUp }

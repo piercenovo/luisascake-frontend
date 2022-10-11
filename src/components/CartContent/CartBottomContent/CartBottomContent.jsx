@@ -26,9 +26,11 @@ const CartBottomContent = (props) => {
             <SummaryItemText>Total</SummaryItemText>
             <SummaryItemPrice>S/. {props.cart.total}.00</SummaryItemPrice>
           </SummaryItem>
+          <Link to='/finalizar-compra'>
           <Button primary normal>
             Finalizar Compra
           </Button>
+        </Link>
         </SummaryWrapper>
       </SummaryContainer>
     </Bottom>

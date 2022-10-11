@@ -6,7 +6,7 @@ import Header from './components/Layout/Header/Header'
 import Footer from './components/Layout/Footer/Footer'
 
 // Pages
-import { Home, About, Shop, CategoryDetail, GiveWithLove, SpecialOrders, Contact, CustomerService, PrivacyPolicies, TermsAndConditions, ComplaintsBook, SignIn, SignUp, Favorites, ShoppingCart, Search, ProductDetail, PageNotFound } from './pages/index'
+import { Home, About, Shop, CategoryDetail, GiveWithLove, SpecialOrders, Contact, CustomerService, PrivacyPolicies, TermsAndConditions, ComplaintsBook, SignIn, SignUp, Favorites, ShoppingCart, Checkout, Search, ProductDetail, PageNotFound } from './pages/index'
 
 const App = () => {
   return (
@@ -41,6 +41,7 @@ const App = () => {
             <Route path="crear-cuenta" element={<SignUp />} />
             <Route path="mis-favoritos" element={<Favorites />} />
             <Route path="carrito-de-compras" element={<ShoppingCart />} />
+            <Route path="finalizar-compra" element={<Checkout />} />
             <Route path="busqueda" element={<Search />} />
             <Route path="producto/:tag" element={<ProductDetail />} />
 

@@ -2,6 +2,8 @@
   "name": "luisascake-frontend",
   "private": true,
   "version": "0.0.1",
+  "main": "index.jsx",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -9,7 +11,8 @@
     "lint": "eslint . --ext .js,.jsx",
     "lint:fix": "eslint --fix . --ext .js,.jsx",
     "commit": "cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "test": "vitest"
   },
   "dependencies": {
     "@material-ui/core": "4.12.4",
@@ -41,7 +44,8 @@
     "husky": "8.0.1",
     "prettier": "2.6.2",
     "vite": "2.9.9",
-    "vite-plugin-compression": "0.5.1"
+    "vite-plugin-compression": "0.5.1",
+    "vitest": "0.24.1"
   },
   "config": {
     "commitizen": {
