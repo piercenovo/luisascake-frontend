@@ -1,6 +1,6 @@
 import Helmet from 'react-helmet'
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
-import FavoriteTable from '../../components/FavoriteContent/FavoriteContent'
+import FavoriteTable from '../../features/favorites/components/FavoriteContent/FavoriteContent'
 
 const Favorites = () => {
   return (

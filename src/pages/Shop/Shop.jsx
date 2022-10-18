@@ -1,6 +1,6 @@
 import Helmet from 'react-helmet'
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
-import Products from '../../components/Products/Products'
+import Products from '../../features/store/components/Products/Products'
 
 const Shop = () => {
   return (

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Helmet from 'react-helmet'
 import { useLocation } from 'react-router-dom'
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
-import ProductInfo from '../../components/ProductInfo/ProductInfo'
+import ProductInfo from '../../features/product_detail/components/ProductInfo/ProductInfo'
 import { publicRequest } from '../../redux/api'
 import { addProduct } from '../../redux/slices/cartSlice'
 import { useDispatch } from 'react-redux'
@@ -39,10 +39,6 @@ const ProductDetail = () => {
   const handleClick = () => {
     dispatch(addProduct({ ...product, quantity, cake_value, padding_value }))
   }
-
-  // const handleClickFavorite = () => {
-  //   dispatch(addProduct({ ...product }))
-  // }
 
   return (
     <>

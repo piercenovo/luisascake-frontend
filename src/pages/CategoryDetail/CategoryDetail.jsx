@@ -1,7 +1,7 @@
 import Helmet from 'react-helmet'
 import { useLocation } from 'react-router-dom'
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
-import Products from '../../components/Products/Products'
+import Products from '../../features/store/components/Products/Products'
 
 const CategoryDetail = () => {
   const location = useLocation()

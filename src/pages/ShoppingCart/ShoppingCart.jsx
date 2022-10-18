@@ -1,6 +1,6 @@
 import Helmet from 'react-helmet'
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
-import CartTable from '../../components/CartContent/CartContent'
+import CartTable from '../../features/cart/components/CartTable/CartTable'
 
 const ShoppingCart = () => {
   return (

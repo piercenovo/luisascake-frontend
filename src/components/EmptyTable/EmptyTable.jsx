@@ -1,9 +1,11 @@
-import { EmptyTitle, TbodyEmptyWrapper } from './EmptyTableStyles'
+import { EmptyTitle, TbodyEmptyWrapper, TbodyEmptyContainer } from './EmptyTableStyles'
 
 const EmptyTable = ({ description }) => {
   return (
     <TbodyEmptyWrapper>
-      <EmptyTitle>No se han añadido productos {description}</EmptyTitle>
+      <TbodyEmptyContainer>
+        <EmptyTitle>No se han añadido productos {description}</EmptyTitle>
+      </TbodyEmptyContainer>
     </TbodyEmptyWrapper>
   )
 }

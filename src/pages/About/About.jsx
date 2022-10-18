@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet'
-import MissionInfo from '../../components/MissionInfo/MissionInfo'
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
-import HistoryInfo from '../../components/HistoryInfo/HistoryInfo'
+
+import HistoryInfo from '../../features/welcome/components/HistoryInfo/HistoryInfo'
+import MissionInfo from '../../features/welcome/components/MissionInfo/MissionInfo'
 
 const About = () => {
   return (

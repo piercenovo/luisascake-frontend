@@ -1,10 +1,10 @@
-import Banner from '../../components/Banner/Banner'
-import ProductCarousel from '../../components/ProductCarousel/ProductCarousel'
-import Slider from '../../components/Slider/Slider'
+import Banner from '../../features/welcome/components/Banner/Banner'
+import ProductCarousel from '../../features/welcome/components/ProductCarousel/ProductCarousel'
+import Slider from '../../features/welcome/components/Slider/Slider'
 import { sliders } from '../../data/SliderData'
 import { bannerObjOne, bannerObjTwo } from '../../data/BannerData'
-import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs'
-import Offers from '../../components/Offers/Offers'
+import WhyChooseUs from '../../features/welcome/components/WhyChooseUs/WhyChooseUs'
+import Offers from '../../features/welcome/components/Offers/Offers'
 
 const Home = () => {
   return (

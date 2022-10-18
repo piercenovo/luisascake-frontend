@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Layout
-import Header from './components/Layout/Header/Header'
-import Footer from './components/Layout/Footer/Footer'
+// Layouts
+import Header from './layouts/Header/Header'
+import Footer from './layouts/Footer/Footer'
 
 // Pages
 import { Home, About, Shop, CategoryDetail, GiveWithLove, SpecialOrders, Contact, CustomerService, PrivacyPolicies, TermsAndConditions, ComplaintsBook, SignIn, SignUp, Favorites, ShoppingCart, Checkout, Search, ProductDetail, PageNotFound } from './pages/index'
@@ -22,7 +22,6 @@ const App = () => {
       </Helmet>
       <Router>
       <Header />
-        {/* <Suspense fallback={null}> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="nosotros" element={<About />} />
@@ -47,7 +46,6 @@ const App = () => {
 
             <Route path="*" element={<PageNotFound/>} />
           </Routes>
-        {/* </Suspense> */}
       <Footer />
 
     </Router>
